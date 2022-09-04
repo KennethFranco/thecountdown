@@ -19,15 +19,6 @@ jobs:
           fileName: CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  add-labels:
-    name: Add Labels
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/labeler@main
-        name: Labeler
-        with:
-          configuration-path: .github/labels.yml
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
   assign-author:
     name: Set Assignee
     runs-on: ubuntu-latest
